@@ -16,7 +16,6 @@ const { errorHandler, notFound } = require('./middleware/error');
 
 const app = express();
 
-// Лимитер запросов
 const limiter = rateLimit({
     windowMs: 15 * 60 * 1000, // 15 минут
     max: 100 // лимит запросов
@@ -39,14 +38,10 @@ app.get('/api/health', (req, res) => {
 });
 
 // Подключение роутов
-app.use('/api', mainRoutes); // Основные роуты
+app.use('/api', mainRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/games', gameRoutes);
-
-// Обработка 404 (должен быть после всех роутов)
 app.use(notFound);
-
-// Обработка ошибок (должен быть последним)
 app.use(errorHandler);
 
 module.exports = app;
