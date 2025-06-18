@@ -1,0 +1,58 @@
+# Логи и временные файлы
+*.log
+*.tmp
+*.pid
+*.pid.lock
+
+# Директории
+/node_modules/
+/dist/
+/coverage/
+/.nyc_output/
+/.vscode/
+/.idea/
+.DS_Store
+
+# Файлы окружения
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# SSL сертификаты (для разработки)
+/certs/
+
+# Базы данных (если используются локальные)
+*.db
+*.sqlite
+/dbdata/
+
+# Дополнительные настройки редакторов
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Системные файлы
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
+
+# Файлы сборки
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Тестовые данные
+/test-results/
+/temp/
+
+# Дополнительно для Node.js
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp*
+.pnpm-debug.log*
